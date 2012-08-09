@@ -1,0 +1,15 @@
+<h2>Últimas entradas del blog</h2>
+
+<% @posts.each do |post| %>
+<article>
+	<header>
+		<h3><a href="/blog/<%= post.id %>"><%= post.title %></a></h3>
+	</header>
+	<div class="body">
+		<%= post.body %>
+	</div>
+	<div class="meta">
+		<small>Escrito: <%= post.created_at %></small>
+	</div>
+</article>
+<% end %>
